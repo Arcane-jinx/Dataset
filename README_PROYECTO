@@ -1,4 +1,4 @@
-##Dataset
+## Dataset
 (OMS) Esperanza de vida
 Aquí te detallo algunas ideas de predicciones que podrías realizar:
 1.	Predicción de la Esperanza de Vida (como en el código actual) Qué predecir: La esperanza de vida (Life expectancy) en función de las otras variables. Variables predictoras: Mortalidad adulta (Adult Mortality), mortalidad infantil (Infant deaths), consumo de alcohol (Alcohol), gasto en salud (percentage expenditure, Total expenditure), cobertura de vacunas (Hepatitis B, Polio, Diphtheria), PIB (GDP), población (Population), escolarización (Schooling), entre otras. Modelo sugerido: Regresión lineal (como en el código), pero también podrías probar modelos más complejos como Random Forest, Gradient Boosting (XGBoost, LightGBM) o redes neuronales para capturar relaciones no lineales. Uso: Identificar qué factores tienen mayor impacto en la esperanza de vida y predecir cómo cambiaría si se modifican ciertas variables (por ejemplo, aumentar el gasto en salud).
