@@ -81,3 +81,43 @@ Preprocesamiento: Para cualquier predicción, asegúrate de limpiar los datos (c
 Selección de variables: Usa técnicas como correlación, importancia de variables (con Random Forest) o métodos como PCA para seleccionar las variables más relevantes.
 Validación: Usa validación cruzada para evaluar la robustez de los modelos.
 Interpretación: Herramientas como SHAP o LIME pueden ayudarte a interpretar las predicciones y entender qué variables son más influyentes.
+
+Ejemplo Rápido: Predicción de Mortalidad Infantil
+Si quisieras predecir la mortalidad infantil (Infant deaths):
+
+Preparar datos:
+python
+
+Contraer
+
+Ajuste
+
+Copiar
+X = df.drop(['Infant deaths', 'Country'], axis=1, errors='ignore')
+X = pd.get_dummies(X, columns=['Status'], drop_first=True)
+y = df['Infant deaths']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+Entrenar modelo:
+python
+
+Contraer
+
+Ajuste
+
+Copiar
+model = RandomForestRegressor(random_state=42)
+model.fit(X_train, y_train)
+Evaluar:
+python
+
+Contraer
+
+Ajuste
+
+Copiar
+y_pred = model.predict(X_test)
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+print(f"MSE: {mse:.2f}, R²: {r2:.2f}")
+Predecir:
+Usa el modelo para predecir la mortalidad infantil en función de nuevas entradas.
