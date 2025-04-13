@@ -1,0 +1,51 @@
+Diagrama de Flujo Esperanza de vida
+Descripción
+El flujo del código sigue un proceso secuencial con varias etapas o secciones, desde la configuración inicial hasta la subida a GitHub:
+1.	Inicio
+o	Acción: Comienza el programa en google colab.
+o	Siguiente: Ir a "Configuración de Librerías".
+2.	Configuración de Librerías
+o	Acción: Instalar e importar librerías necesarias (pandas, numpy, scikit-learn, gradio, etc.).
+o	Siguiente: Ir a "Carga y Preprocesamiento de Datos".
+3.	Carga y Preprocesamiento de Datos
+o	Acción: Cargar el dataset (Esperanza_de_vida2000-2015.csv), limpiar datos (valores faltantes, conversión de categorías a numéricas).
+o	Siguiente: Ir a "Definir Funciones Auxiliares".
+4.	Definir Funciones Auxiliares
+o	Acción: Crear funciones para estadísticas, visualizaciones, modelado, predicciones y análisis por países (get_dataset_stats, get_model_details, etc.).
+o	Siguiente: Ir a "Entrenar Modelo de Regresión Lineal".
+5.	Entrenar Modelo de Regresión Lineal
+o	Acción: Dividir datos en características y objetivo, escalar datos, dividir en entrenamiento/prueba, entrenar modelo LinearRegression.
+o	Siguiente: Ir a "Definir Preguntas Predefinidas".
+6.	Definir Preguntas Predefinidas
+o	Acción: Crear una lista de preguntas predefinidas para la pestaña de preguntas en Gradio.
+o	Siguiente: Ir a "Crear Interfaz de Gradio (Primera Versión)".
+7.	Crear Interfaz de Gradio (Primera Versión)
+o	Acción: Construir una interfaz con pestañas para estadísticas, modelo, predicciones, preguntas y análisis por países.
+o	Siguiente: Ir a "Depurar Error de Análisis por Países".
+8.	Depurar Error de Análisis por Países
+o	Acción: Corregir el error AttributeError: 'list' object has no attribute 'tolist' en la pestaña "Países" ajustando cómo se manejan las opciones de países (country_choices).
+o	Siguiente: Ir a "Mejorar Interfaz de Gradio (Segunda Versión)".
+9.	Mejorar Interfaz de Gradio (Segunda Versión)
+o	Acción: Añadir CSS personalizado, una barra lateral colapsable, y corregir colores de texto para mejorar la interfaz.
+o	Siguiente: Ir a "Limpiar Cuaderno para GitHub".
+10.	Limpiar Cuaderno para GitHub
+o	Acción: Eliminar metadatos de widgets para evitar problemas de renderizado en GitHub.
+o	Siguiente: Ir a "Limpiar Salidas (Opcional)".
+11.	Limpiar Salidas (Opcional)
+o	Decisión: ¿Limpiar salidas para reducir tamaño?
+	Sí: Eliminar salidas de las celdas y guardar como Esperanza_de_vida2000-2015_clean_no_outputs.ipynb.
+	No: Continuar.
+o	Siguiente: Ir a "Subir Cuaderno a GitHub".
+12.	Subir Cuaderno a GitHub
+o	Acción: Autenticarse con la API de GitHub, verificar/crear repositorio, codificar el cuaderno en base64 y subirlo.
+o	Siguiente: Ir a "Subir Dataset y Crear README (Opcional)".
+13.	Subir Dataset y Crear README (Opcional)
+o	Decisión: ¿Subir dataset y crear README?
+	Sí: Subir el archivo CSV y crear/actualizar un README.md con instrucciones.
+	No: Continuar.
+o	Siguiente: Ir a "Actualizar Cuaderno en GitHub".
+14.	Actualizar Cuaderno en GitHub
+o	Acción: Verificar si el archivo existe en GitHub, obtener su SHA, y actualizarlo con la versión más reciente.
+o	Siguiente: Ir a "Fin".
+15.	Fin
+o	Acción: Finalizar el programa.
