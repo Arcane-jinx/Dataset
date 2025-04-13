@@ -1,0 +1,59 @@
+---
+config:
+  theme: mc
+  look: neo
+---
+flowchart TD
+    A["Inicio"] --> B["Configuración de Librerías"]
+    B --> C["Carga y Preprocesamiento de Datos"]
+    C --> D["Definir Funciones Auxiliares"]
+    D --> E["Entrenar Modelo de Regresión Lineal"]
+    E --> F["Definir Preguntas Predefinidas"]
+    F --> G["Crear Interfaz de Gradio - Primera Versión"]
+    G --> H["Depurar Error de Análisis por Países"]
+    H --> I["Mejorar Interfaz de Gradio - Segunda Versión"]
+    I --> J["Limpiar Cuaderno para GitHub"]
+    J --> K{"¿Limpiar Salidas?"}
+    K -- Sí --> L["Limpiar Salidas"]
+    K -- No --> M["Subir Cuaderno a GitHub"]
+    L --> M
+    M --> N{"¿Subir Dataset y Crear README?"}
+    N -- Sí --> O["Subir Dataset y Crear README"]
+    N -- No --> P["Actualizar Cuaderno en GitHub"]
+    O --> P
+    P --> Q["Fin"]
+    B -- Instalar e importar --> C
+    C -- Cargar CSV, limpiar datos --> D
+    D -- Crear funciones --> E
+    E -- Entrenar modelo --> F
+    F -- Lista de preguntas --> G
+    G -- Construir interfaz --> H
+    H -- Corregir error --> I
+    I -- Añadir CSS y barra lateral --> J
+    J -- Eliminar metadatos --> K
+    L -- Eliminar salidas --> M
+    M -- Subir a GitHub --> N
+    O -- Subir CSV y README --> P
+    P -- Actualizar archivo --> Q
+    A@{ shape: h-cyl}
+    B@{ shape: hex}
+    classDef Rose stroke-width:1px, stroke-dasharray:none, stroke:#FF5978, fill:#FFDFE5, color:#8E2236
+    style A fill:#BBDEFB,stroke-width:4px,stroke-dasharray: 0,color:#000000
+    style B color:#000000,stroke-width:4px,stroke-dasharray: 0
+    style C stroke-width:4px,stroke-dasharray: 0
+    style D stroke-width:4px,stroke-dasharray: 0
+    style E stroke-width:4px,stroke-dasharray: 0
+    style F stroke-width:4px,stroke-dasharray: 0
+    style G stroke-width:4px,stroke-dasharray: 0
+    style H stroke-width:4px,stroke-dasharray: 0
+    style I stroke-width:4px,stroke-dasharray: 0
+    style J stroke-width:4px,stroke-dasharray: 0
+    style K stroke-width:4px,stroke-dasharray: 0
+    style L stroke-width:4px,stroke-dasharray: 0
+    style M fill:#BBDEFB
+    style N stroke-width:4px,stroke-dasharray: 0
+    style O stroke-width:4px,stroke-dasharray: 0
+    style P stroke-width:4px,stroke-dasharray: 0
+    style Q stroke-width:4px,stroke-dasharray: 0
+    click A "https://colab.research.google.com/drive/1IiaxI4g-Y7OmYjNTZCv-eLh7_R14biAl#scrollTo=yooJw5HSlmgK"
+    click M "https://github.com/Arcane-jinx/Dataset"
